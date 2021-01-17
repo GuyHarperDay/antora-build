@@ -1,0 +1,21 @@
+site:
+  title: Test playbook
+  # Antora generates the 404 page and sitemap files only when the `url` property is set.
+  url: https://127.0.0.1
+  start_page: test-antora-site::index.adoc
+output:
+  clean: true
+content:
+  sources:
+    - url: ../antora-source
+      branches: HEAD
+      # Set `edit_url` to `false` to disable the 'Edit this Page' link for any page [all pages?] that originates from this repository.
+      # You can achieve the same thing if you add empty credentials (simply `@`) in front of the domain in the URL.
+      edit_url: false
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  output_dir: assets
+runtime:
+  cache_dir: ./.cache/antora

@@ -1,0 +1,9 @@
+name: Publish Antora site
+on: workflow_dispatch
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "There has been a change on the actions-experiment branch "

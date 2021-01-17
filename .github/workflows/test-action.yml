@@ -5,5 +5,23 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "There has been a change in the source repo"
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build with antora
+        run: antora web-playbook.yml
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: Guy Harper-Day
+          author_email: guy.harper@gmail.com
+          message: 'New build triggered by change to antora-source'

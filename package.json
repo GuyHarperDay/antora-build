@@ -1,6 +1,9 @@
 {
   "name": "antora-build",
   "version": "0.1.0",
+  "scripts": {
+    "build": "antora web-playbook.yml"
+  },
   "dependencies": {
     "@antora/cli": "^2.3.4",
     "@antora/site-generator-default": "^2.3.4"

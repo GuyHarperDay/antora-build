@@ -5,6 +5,7 @@ site:
   start_page: test-antora-site::index.adoc
 output:
   clean: true
+  dir: ./docs
 content:
   sources:
     - url: ../antora-source

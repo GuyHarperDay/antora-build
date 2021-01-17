@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "There has been a change on the actions-experiment branch "
+          echo "There has been a change in the source repo"

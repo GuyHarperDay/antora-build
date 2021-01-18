@@ -32,6 +32,7 @@ jobs:
           author_email: guy.harper@gmail.com
           message: 'Deleting docs directory'
           branch: github-pages-source
+          push: false
 
       - name: Checkout master branch
         uses: actions/checkout@v2

@@ -1,5 +1,9 @@
 name: Publish Antora site
-on: [workflow_dispatch, push: main]
+on:
+  workflow_dispatch
+  push: 
+    branches:
+      main
 
 jobs:
   build_antora:

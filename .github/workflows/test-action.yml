@@ -9,8 +9,10 @@ jobs:
   build_antora:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout github-pages-source branch
         uses: actions/checkout@v2
+        with:
+          ref: github-pages-source
 
       - name: Set up Node.js
         uses: actions/setup-node@v1
@@ -19,6 +21,22 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Delete /docs folder
+        run: npm run delete-docs
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: Guy Harper-Day
+          author_email: guy.harper@gmail.com
+          message: 'Deleting docs directory'
+          branch: github-pages-source
+
+      - name: Checkout master branch
+        uses: actions/checkout@v2
+        with:
+          ref: master
 
       - name: Build with antora
         run: npm run build

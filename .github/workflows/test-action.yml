@@ -35,9 +35,7 @@ jobs:
           push: false
 
       - name: Checkout master branch
-        uses: actions/checkout@v2
-        with:
-          ref: master
+        run: git checkout master
 
       - name: Build with antora
         run: npm run build

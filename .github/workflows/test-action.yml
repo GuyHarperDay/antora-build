@@ -25,8 +25,7 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
-          author_name: Guy Harper-Day
-          author_email: guy.harper@gmail.com
+          author_name: Somebody
           message: 'Deleting docs directory'
           branch: github-pages-source
 
@@ -42,7 +41,6 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
-          author_name: Guy Harper-Day
-          author_email: guy.harper@gmail.com
+          author_name: Somebody
           message: 'New build triggered'
           branch: github-pages-source

@@ -1,5 +1,5 @@
 name: Publish Antora site
-on: workflow_dispatch
+on: [workflow_dispatch, push: main]
 
 jobs:
   build_antora:
@@ -24,4 +24,5 @@ jobs:
         with:
           author_name: Guy Harper-Day
           author_email: guy.harper@gmail.com
-          message: 'New build triggered by change to antora-source'
+          message: 'New build triggered'
+          branch: github-pages-source

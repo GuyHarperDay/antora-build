@@ -19,9 +19,6 @@ jobs:
         with:
           node-version: 12.x
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Delete /docs folder
         run: npm run delete-docs
 
@@ -36,6 +33,9 @@ jobs:
 
       - name: Checkout master branch
         uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Build with antora
         run: npm run build

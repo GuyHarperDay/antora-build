@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build_antora:
@@ -25,7 +25,8 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
-          author_name: Somebody
+          author_name: GuyHarperDay
+          author_email:
           message: 'Deleting docs directory'
           branch: github-pages-source
 
@@ -41,6 +42,7 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
-          author_name: Somebody
-          message: 'New build triggered'
+          author_name: GuyHarperDay
+          author_email:
+          message: 'New Antora build, triggered by change to a main branch in either this or a source repository.'
           branch: github-pages-source

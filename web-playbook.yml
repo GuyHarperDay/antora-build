@@ -10,9 +10,10 @@ content:
   sources:
     - url: https://github.com/GuyHarperDay/antora-source.git
       branches: main
-      # Set `edit_url` to `false` to disable the 'Edit this Page' link for any page [all pages?] that originates from this repository.
-      # You can achieve the same thing if you add empty credentials (simply `@`) in front of the domain in the URL.
       edit_url: false
+    - url: https://github.com/GuyHarperDay/antora-source.git
+      branches: another-branch
+      edit_url: '{web_url}/tree/{refname}/{path}'
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable

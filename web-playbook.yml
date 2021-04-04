@@ -9,10 +9,7 @@ output:
 content:
   sources:
     - url: https://github.com/GuyHarperDay/antora-source.git
-      branches: main
-      edit_url: false
-    - url: https://github.com/GuyHarperDay/antora-source.git
-      branches: another-branch
+      branches: main, another-branch
       edit_url: '{web_url}/tree/{refname}/{path}'
 ui:
   bundle:
